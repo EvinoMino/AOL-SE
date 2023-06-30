@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color:black;
+    text-decoration: none;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 10%;
+    border: 1px solid rgba(0, 0, 0, 0.603);
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.promotion{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width:1500px;
+    cursor: pointer;
+}
+
+.nav_links{
+    list-style: none;
+    font-weight: bolder ;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0;
+}
+
+.nav_links li a:hover{
+    color: darkkhaki;
+}
+
+.user {
+    padding : 9px 25px;
+    color:black;
+    background-color: grey;
+    border: none;
+    border-radius: 50px;
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.user:hover{
+    color:white;
+    background-color: black;
+}
+
+.wrapper{
+    max-height: 300px;
+    border: 0px solid whitesmoke;
+    display:flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+.wrapper::-webkit-scrollbar{
+    width: 0;
+}
+.wrapper .item{
+    min-width: 260px;
+    height: 260px;
+    line-height: 210px;
+    text-align: center;
+    background-color: whitesmoke;
+    margin-right: 25px;
+    margin-left: 25px;
+    border-radius: 25px;
+}
+
+.logo-btn{
+  background: white;
+  color:white;
+  border:none;
+  cursor: pointer;
+}
+
+button{
+    background: white;
+    color:white;
+    border:none;
+}
+
+.login-container {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    background-color: white;
+  }
+  
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+  }
+  
+  label {
+    font-family: "Montserrat", sans-serif;
+    display: block;
+    font-weight: bolder;
+    margin-bottom: 1px;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  input[type="submit"] {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    padding: 10px;
+    background-color: darkkhaki;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    color:white;
+    background-color: darkgreen;
+  }
+
+  .login-container a:hover{
+    color: darkkhaki;
+  }

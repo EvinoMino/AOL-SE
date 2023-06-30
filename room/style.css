@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color:black;
+    text-decoration: none;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 10%;
+    border: 1px solid rgba(0, 0, 0, 0.603);
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.promotion{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width:1500px;
+    cursor: pointer;
+}
+
+.nav_links{
+    list-style: none;
+    font-weight: bolder ;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0;
+}
+
+.nav_links li a:hover{
+    color: darkkhaki;
+}
+
+.user {
+    padding : 9px 25px;
+    color:black;
+    background-color: grey;
+    border: none;
+    border-radius: 50px;
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.user:hover{
+    color:white;
+    background-color: black;
+}
+
+.wrapper{
+    max-height: 300px;
+    border: 0px solid whitesmoke;
+    display:flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+.wrapper::-webkit-scrollbar{
+    width: 0;
+}
+.wrapper .item{
+    min-width: 260px;
+    height: 260px;
+    line-height: 210px;
+    text-align: center;
+    background-color: whitesmoke;
+    margin-right: 25px;
+    margin-left: 25px;
+    border-radius: 25px;
+}
+
+.logo-btn{
+  background: white;
+  color:white;
+  border:none;
+  cursor: pointer;
+}
+
+button{
+  font-family: "Montserrat", sans-serif;
+    background: white;
+    color:white;
+    border:none;
+}
+.details-container button{
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+  background: darkkhaki;
+  color:black;
+  border-radius: 10px;
+}
+.details-container button:hover{
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+  background: black;
+  color:white;
+  border-radius: 10px;
+}
+.login-container {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    background-color: white;
+  }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+  }
+  
+  .image-container {
+    position: relative;
+    margin-right: 200px;
+    margin-top: 100px;
+  }
+  
+  .image-container img{
+    border : 1px solid black;
+    border-radius: 15px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .timer {
+    font-family: "Montserrat", sans-serif;
+    padding: 10px;
+    font-weight: bolder;
+    background-color: white;
+    color: darkgreen;
+  }
+  
+  .details-container {
+    font-family: "Montserrat", sans-serif;
+    width: 400px;
+  }
+  
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 10px;
+    font-size: 23ox;
+  }
+  
+  
+  .price {
+    padding-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+  }
+
+  .leaderboard {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 10px;
+  }
+  
+  .leaderboard h3 {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  
+  .leaderboard ol {
+    font-family: "Montserrat", sans-serif;
+    list-style-type: decimal;
+    margin-left: 20px;
+  }
+  
+  .leaderboard li {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 5px;
+  }
+
+  input[type="number"]{
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  input[type="bidButton"] {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    padding: 10px;
+    background-color: darkkhaki;
+    color: black;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    color:black;
+    background-color: darkgreen;
+  }
+  

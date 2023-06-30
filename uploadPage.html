@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEFAA</title>
+    <link rel="stylesheet" href="style/upload.css">
+    <style>
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .popup {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+  </style>
+</head>
+<body>
+    <header>
+        <a class="cta" href="homePage.html"><button class="logo-btn"><img src="images/logo.png" alt=""></button></a>
+          <nav>
+              <ul class="nav_links">
+                  <li><a href="explorePage.html">Explore</a></li>
+                  <li><a>|</a></li>
+                  <li><a href="uploadPage.html">Upload</a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="topupPage.html">Rp. 1.000.000</a></li>
+              </ul>
+          </nav>
+          <a class="cta" href="#"><button class="user">User</button></a>
+      </header>
+
+      <div class="upload-container">
+        <h2>Upload Product</h2>
+        <form id="myForm" action="explorePage copy.html" method="get">
+          <label for="product-image">Product Image:</label>
+          <input type="file" id="product-image" name="product-image" accept=".png, .jpg, .jpeg" required><br><br>
+    
+          <label for="product-name">Product Name:</label>
+          <input type="text" placeholder="Type product name" id="product-name" name="product-name" required><br><br>
+    
+          <label for="product-detail">Product Detail:</label>
+          <textarea id="product-detail" placeholder="Max 250 Word" name="product-detail" required></textarea><br><br>
+    
+          <label for="product-price">Product Price:</label>
+          <input type="number" placeholder="Enter your product price" id="product-price" name="product-price" step="0.01" required><br><br>
+    
+          <input type="submit" value="Submit" onclick="showNotification()">
+
+        </form>
+        
+      </div>
+      <div id="overlay" class="overlay">
+        <div class="popup">
+            <h2>Notification</h2>
+            <p>Thank you for submitting the form!</p>
+            <p>Redirecting to the explore page in <span id="countdown">5</span> seconds...</p>
+        </div>
+    </div>
+
+      <script>
+        // function showNotification() {
+        //   var notification = document.getElementById("notification");
+        //   notification.style.display = "block";
+
+        //   setTimeout(function() {
+        //     notification.style.display = "none";
+        //   }, 5000); // Menyembunyikan notifikasi setelah 3 detik (3000ms)
+
+        //   event.preventDefault(); // Prevent immediate form submission
+            
+        //     setTimeout(function() {
+        //         document.getElementById("myForm").submit(); // Trigger form submission after 5 seconds
+        //     }, 5000); // 5 seconds delay
+        // }
+        // function countdownTimer() {
+        //     var count = 5; // Number of seconds for the countdown
+            
+        //     var countdown = setInterval(function() {
+        //         document.getElementById("timer").textContent = count; // Update the timer value
+                
+        //         if (count === 0) {
+        //             clearInterval(countdown); // Stop the countdown
+        //             document.getElementById("myForm").submit(); // Trigger form submission after countdown
+        //         }
+                
+        //         count--;
+        //     }, 1000); // Update every 1 second (1000 milliseconds)
+        // }
+        
+        // function delayRedirect(event) {
+        //     event.preventDefault(); // Prevent immediate form submission
+        //     countdownTimer(); // Start the countdown
+        // }
+        function displayPopupAndRedirect(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            var overlay = document.getElementById("overlay");
+            overlay.style.display = "flex";
+            
+            var countdownElement = document.getElementById("countdown");
+            var count = 5; // Number of seconds for the countdown
+            
+            var countdown = setInterval(function() {
+                countdownElement.textContent = count; // Update the countdown value
+                
+                if (count === 0) {
+                    clearInterval(countdown); // Stop the countdown
+                    window.location.href = "explorePage copy.html"; // Redirect after countdown
+                }
+                
+                count--;
+            }, 1000); // Update every 1 second (1000 milliseconds)
+        }
+
+        var form = document.getElementById("myForm");
+        form.addEventListener("submit", displayPopupAndRedirect);
+    </script>
+</body>
+</html>
